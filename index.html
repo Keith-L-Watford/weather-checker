@@ -14,9 +14,54 @@
 
 <body>
 
+<header>
+    <h1 class="text-center">Weather Dashboard</h1>
+</header>
+    <main class="container d-flex">
+        <aside class=" column">
+            <h3>Search for a City:</h3>
+            <div class="input-group mb-3">
+                <input class="form-control col-2"  type="text" placeholder="Philadelphia" aria-label="default input example">
+                <button type="button" class="btn btn-primary">Primary</button>  
+            </div>
+
+            <div>
+                <ul class="list-group list-group-flush"></ul>
+                <li class="list-group-item">An item</li>
+            </div>
+        </aside>
+
+        <section>
+            <div class="col-9 today">
+                <h3 id="city-searched" class="date"></h3>
+                hello</div> 
+
+
+            <div class="container">
+                <div class="row">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day-plus-1-">Test/Tomorrow</h5>
+                        <div id="tomorrow"></div>
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title" id="day-plus-1-">Test/Tomorrow</h5>
+                        <div id="tomorrow"></div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </main>
 
     <!-- Jquery, moment.js and my script.js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
