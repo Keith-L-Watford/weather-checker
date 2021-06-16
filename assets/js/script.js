@@ -1,16 +1,18 @@
 var APIKey = "ebc561a4f7b5280398d199954c0c6462";
-var userCity = "";
-
+var userCity = "Philadelphia"
+// document.querySelector("#search").value.trim;
+console.log(userCity);
+var city = ""
 // var lat = 39.9523
 // var lon = -75.1638
 var submitButton = document.getElementsByClassName("btn");
 
 var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&appid=" + APIKey;
 
-console.log(userCity);
 
-function checkWeather(params) {
 
+// function getWeather(event) {
+//   event.preventDefault();
 
   fetch(queryURL)
     .then((res) => res.json()
@@ -36,9 +38,26 @@ function checkWeather(params) {
 
               console.log(data.lat);
               console.log(data.lon);
+
+              var tempKelvin = data.current.temp
+              var tempFahrenheit = (tempKelvin - 273.15) * (9/5) + 32
+
+              console.log(tempFahrenheit);
+
+              var tempEl = document.querySelector("#city-temp");
+              var uviEl = document.querySelector("#city-uvi");
+              var windEl = document.querySelector("#city-wind");
+              var humidityEl = document.querySelector("#city-humidity");
+
+              tempEl.textContent = "Temp: " ;
+
+
+
+
+
             }))
       }))
-}
+// }
 
 
 
@@ -46,10 +65,6 @@ function checkWeather(params) {
 
 
 
-
-
-
-submitButton.addEventListener('submit');
 
 // for (let i = 0; i < daily.length; i++) {
 
