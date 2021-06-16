@@ -8,7 +8,7 @@ var today = moment().format('MM-DD-YYYY');
 
 var submitButton = document.getElementsByClassName("btn");
 
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&appid=" + APIKey;
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&appid=" + APIKey;
 
 
 
