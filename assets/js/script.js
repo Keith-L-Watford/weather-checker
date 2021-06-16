@@ -1,8 +1,10 @@
 var APIKey = "ebc561a4f7b5280398d199954c0c6462";
 var userCity = "Philadelphia"
+
 // document.querySelector("#search").value.trim;
 console.log(userCity);
 var city = ""
+var today = moment().format('MM-DD-YYYY');
 // var lat = 39.9523
 // var lon = -75.1638
 var submitButton = document.getElementsByClassName("btn");
@@ -40,16 +42,24 @@ var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity + 
               console.log(data.lon);
 
               var tempKelvin = data.current.temp
-              var tempFahrenheit = (tempKelvin - 273.15) * (9/5) + 32
+              var tempFahrenheit = Math.floor((tempKelvin - 273.15) * (9/5) + 32)
+              var uviNum = data.current.uvi
+              var windNum = data.current.wind_speed
+              var humidityNum = data.current.humidity
 
               console.log(tempFahrenheit);
 
+              var citySearchedEl = document.querySelector("#city-searched");
               var tempEl = document.querySelector("#city-temp");
               var uviEl = document.querySelector("#city-uvi");
               var windEl = document.querySelector("#city-wind");
               var humidityEl = document.querySelector("#city-humidity");
 
-              tempEl.textContent = "Temp: " ;
+              citySearchedEl.textContent = userCity + " (" + today + ")"
+              tempEl.textContent = "Temp: " + tempFahrenheit + " degrees";
+              windEl.textContent = "Wind: " + windNum + " MPH"
+              humidityEl.textContent = "Humidity: " + humidityNum +"%"
+              uviEl.textContent = "UV Index: " + uviNum;
 
 
 
