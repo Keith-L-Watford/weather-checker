@@ -14,15 +14,16 @@
 
 <body>
 
-<header>
-    <h1 class="text-center">Weather Dashboard</h1>
-</header>
+    <header>
+        <h1 class="text-center">Weather Dashboard</h1>
+    </header>
     <main class="container d-flex">
         <aside class=" column">
             <h3>Search for a City:</h3>
             <div class="input-group mb-3">
-                <input class="form-control col-2"  type="text" placeholder="Philadelphia" aria-label="default input example">
-                <button type="button" class="btn btn-primary" id="search">Search</button>  
+                <input class="form-control col-2" type="text" placeholder="Philadelphia"
+                    aria-label="default input example">
+                <button type="button" class="btn btn-primary" id="search">Search</button>
             </div>
 
             <div>
@@ -38,24 +39,28 @@
                 <div id="city-uvi"></div>
                 <div id="city-wind"></div>
                 <div id="city-humidity"></div>
-            </div> 
+            </div>
             <div class="container">
                 <div class="row">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day-plus-1-">Test/Tomorrow</h5>
-                        <div id="tomorrow"></div>
-                        </p>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+
+                            <h5 class="card-title" id="today-1" class="date"></h5>
+                            <p id="city-temp-1"></p>
+                            <div id="city-uvi-1"></div>
+                            <div id="city-win-1"></div>
+                            <div id="city-humidity-1"></div>
+
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title" id="day-plus-1-">Test/Tomorrow</h5>
+                            <div id="tomorrow"></div>
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day-plus-1-">Test/Tomorrow</h5>
-                        <div id="tomorrow"></div>
-                        </p>
-                    </div>
-                </div>
-            </div>
 
             </div>
         </section>
