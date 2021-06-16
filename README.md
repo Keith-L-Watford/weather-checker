@@ -14,6 +14,7 @@ I assigned to create a weather checker using the OpenWeather API. I spent most o
 No installs required. Works best in an updated browser.
 
 ## Usage
+https://keith-l-watford.github.io/weather-checker/
 Expected behavior: A user would type in their city and recieve the weather results.
 
 Actual behavior: Nothing happens, the input and 'search' button arent properly set up. As it stands currently, you have to change the city in the JS file to get a different city's weather results
