@@ -1,7 +1,7 @@
 # Weather Checker
 
 ## Description
-~_~
+I assigned to create a weather checker using the OpenWeather API. I spent most of my time familiarizing myself with the docs for API set up, and how to get the extract the information I needed. While working on this project I gained experience and confidence in creating dynamically generated elements with JavaScript.  
 
 ## Table of Contents (Optional)
 - [Installation](#installation)
@@ -14,17 +14,19 @@
 No installs required. Works best in an updated browser.
 
 ## Usage
-~_~
+Expected behavior: A user would type in their city and recieve the weather results.
+
+Actual behavior: Nothing happens, the input and 'search' button arent properly set up. As it stands currently, you have to change the city in the JS file to get a different city's weather results
 
 Here's a screenshot of the reference website:
-![A screenshot of the referenced website](assets/images/portfolio_mockup.png)
+![A screenshot of the referenced website](assets/images/website_screenshot.png)
 
 
 ## Credits
-~_~
+Shout out to my tutor scott for helping me with the API set up and working with the docs.
 
 ## Notes
-~_~
+I will definitely be return to this project when I am able. All that was left was to figure out the button input and using local storage to turn previously searched cities into clickable buttons.
 
 ## License
 This is free and unencumbered software released into the public domain.

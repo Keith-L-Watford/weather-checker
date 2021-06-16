@@ -359,8 +359,8 @@ fetch(queryURL)
 // an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
 
 
-// WHEN I view the UV index
-// THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+// WHEN*** I view the UV index
+// THEN*** I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
 
 
 // WHEN*** I view futur e weather conditions for that city
