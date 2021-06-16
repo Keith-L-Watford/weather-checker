@@ -56,7 +56,7 @@ fetch(queryURL)
             var humidityEl = document.querySelector("#city-humidity");
 
             citySearchedEl.textContent = userCity + " (" + today + ")"
-            tempEl.textContent = "Temp: " + tempFahrenheit + " degrees";
+            tempEl.textContent = "Temp: " + tempFahrenheit + "°";
             windEl.textContent = "Wind: " + windNum + " MPH"
             humidityEl.textContent = "Humidity: " + humidityNum + "%"
             uviEl.textContent = "UV Index: " + uviNum;
@@ -84,7 +84,7 @@ fetch(queryURL)
             var humidityElOne = document.querySelector("#city-humidity-1");
 
             dateElOne.textContent = "(" + todayPlusOne + ")"
-            tempElOne.textContent = "Temp: " + tempFahrenheitOne + " degrees";
+            tempElOne.textContent = "Temp: " + tempFahrenheitOne + "°";
             windElOne.textContent = "Wind: " + windNumOne + " MPH"
             humidityElOne.textContent = "Humidity: " + humidityNumOne + "%"
             uviElOne.textContent = "UV Index: " + uviNumOne;
