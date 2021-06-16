@@ -16,86 +16,86 @@ var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + userCity + 
 // function getWeather(event) {
 //   event.preventDefault();
 
-  fetch(queryURL)
-    .then((res) => res.json()
-      .then((data) => {
-        // console.log(data);
-        // console.log(data.coord.lat);
-        // console.log(data.coord.lon);
+fetch(queryURL)
+  .then((res) => res.json()
+    .then((data) => {
+      // console.log(data);
+      // console.log(data.coord.lat);
+      // console.log(data.coord.lon);
 
-        var cityLat = data.coord.lat
-        var cityLon = data.coord.lon
+      var cityLat = data.coord.lat
+      var cityLon = data.coord.lon
 
-        var uvURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&appid=" + APIKey;
+      var uvURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLat + "&lon=" + cityLon + "&appid=" + APIKey;
 
-        fetch(uvURL)
-          .then((res) => res.json()
-            .then((data) => {
-              console.log(data);
-              // write jquery here with dynamic elements.
-              // console.log(data.current.temp);
-              // console.log(data.current.uvi);
-              // console.log(data.current.wind_speed);
-              // console.log(data.current.humidity);
+      fetch(uvURL)
+        .then((res) => res.json()
+          .then((data) => {
+            console.log(data);
+            // write jquery here with dynamic elements.
+            // console.log(data.current.temp);
+            // console.log(data.current.uvi);
+            // console.log(data.current.wind_speed);
+            // console.log(data.current.humidity);
 
-              // console.log(data.lat);
-              // console.log(data.lon);
+            // console.log(data.lat);
+            // console.log(data.lon);
 
-              var tempKelvin = data.current.temp
-              var tempFahrenheit = Math.floor((tempKelvin - 273.15) * (9/5) + 32)
-              var uviNum = data.current.uvi
-              var windNum = data.current.wind_speed
-              var humidityNum = data.current.humidity
+            var tempKelvin = data.current.temp
+            var tempFahrenheit = Math.floor((tempKelvin - 273.15) * (9 / 5) + 32)
+            var uviNum = data.current.uvi
+            var windNum = data.current.wind_speed
+            var humidityNum = data.current.humidity
 
-              // console.log(tempFahrenheit);
+            // console.log(tempFahrenheit);
 
-              var citySearchedEl = document.querySelector("#city-searched");
-              var tempEl = document.querySelector("#city-temp");
-              var uviEl = document.querySelector("#city-uvi");
-              var windEl = document.querySelector("#city-wind");
-              var humidityEl = document.querySelector("#city-humidity");
+            var citySearchedEl = document.querySelector("#city-searched");
+            var tempEl = document.querySelector("#city-temp");
+            var uviEl = document.querySelector("#city-uvi");
+            var windEl = document.querySelector("#city-wind");
+            var humidityEl = document.querySelector("#city-humidity");
 
-              citySearchedEl.textContent = userCity + " (" + today + ")"
-              tempEl.textContent = "Temp: " + tempFahrenheit + " degrees";
-              windEl.textContent = "Wind: " + windNum + " MPH"
-              humidityEl.textContent = "Humidity: " + humidityNum +"%"
-              uviEl.textContent = "UV Index: " + uviNum;
+            citySearchedEl.textContent = userCity + " (" + today + ")"
+            tempEl.textContent = "Temp: " + tempFahrenheit + " degrees";
+            windEl.textContent = "Wind: " + windNum + " MPH"
+            humidityEl.textContent = "Humidity: " + humidityNum + "%"
+            uviEl.textContent = "UV Index: " + uviNum;
 
-              // 
-              // 
+            // 
+            // 
 
-              var todayPlusOne = moment().add(1, 'days').format('MM-DD-YYYY')
-              var tempKelvinOne = data.daily[1].temp.day
-              var tempFahrenheitOne = Math.floor((tempKelvinOne - 273.15) * (9/5) + 32)
-              var uviNumOne = data.daily[1].uvi
-              var windNumOne = data.daily[1].wind_speed
-              var humidityNumOne = data.daily[1].humidity
+            var todayPlusOne = moment().add(1, 'days').format('MM-DD-YYYY')
+            var tempKelvinOne = data.daily[1].temp.day
+            var tempFahrenheitOne = Math.floor((tempKelvinOne - 273.15) * (9 / 5) + 32)
+            var uviNumOne = data.daily[1].uvi
+            var windNumOne = data.daily[1].wind_speed
+            var humidityNumOne = data.daily[1].humidity
 
+            console.log(todayPlusOne);
+            console.log(tempFahrenheitOne);
+            console.log(uviNumOne);
+            console.log(windNumOne);
+            console.log(humidityNumOne);
 
-              console.log(data.daily[1].temp.day);
-              console.log(data.daily[1].uvi);
-              console.log(data.daily[1].wind_speed);
-              console.log(data.daily[1].humidity);              
+            var dateElOne = document.querySelector("#today-1");
+            var tempElOne = document.querySelector("#city-temp-1");
+            var uviElOne = document.querySelector("#city-uvi-1");
+            var windElOne = document.querySelector("#city-wind-1");
+            var humidityElOne = document.querySelector("#city-humidity-1");
 
-              var dateElOne = document.querySelector("#today-1");
-              var tempElOne = document.querySelector("#city-temp-1");
-              var uviElOne = document.querySelector("#city-uvi-1");
-              var windElOne = document.querySelector("#city-wind-1");
-              var humidityElOne = document.querySelector("#city-humidity-1");
-
-              dateElOne.textContent = "(" + todayPlusOne + ")"
-              tempElOne.textContent = "Temp: " + tempFahrenheitOne + " degrees";
-              windElOne.textContent = "Wind: " + windNumOne + " MPH"
-              humidityElOne.textContent = "Humidity: " + humidityNumOne +"%"
-              uviElOne.textContent = "UV Index: " + uviNumOne;
-
-          
+            dateElOne.textContent = "(" + todayPlusOne + ")"
+            tempElOne.textContent = "Temp: " + tempFahrenheitOne + " degrees";
+            windElOne.textContent = "Wind: " + windNumOne + " MPH"
+            humidityElOne.textContent = "Humidity: " + humidityNumOne + "%"
+            uviElOne.textContent = "UV Index: " + uviNumOne;
 
 
-              // console.log(data.daily.1.temp);
 
-            }))
-      }))
+
+            // console.log(data.daily.1.temp);
+
+          }))
+    }))
 // }
 
 
