@@ -1,11 +1,10 @@
 var searchButton = document.querySelector(".btn");
 var cityInput = document.querySelector("#city-input");
 var APIKey = "ebc561a4f7b5280398d199954c0c6462";
-var userCity = "Boston"
+// var userCity = "Boston"
 
 // document.querySelector("#search").value.trim;
-console.log(userCity);
-var city = ""
+// console.log(userCity);
 var today = moment().format('MM-DD-YYYY');
 
 var submitButton = document.getElementsByClassName("btn");
@@ -348,8 +347,8 @@ function goWeather(userCity) {
 
 function test(event) {
   event.preventDefault()
-  console.log("you clicked me");
-  console.log(cityInput.value);
+  // console.log("you clicked me");
+  // console.log(cityInput.value);
   
   var currentCity = cityInput.value
 
