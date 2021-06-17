@@ -18,6 +18,8 @@ https://keith-l-watford.github.io/weather-checker/
 Expected behavior: A user would type in their city and recieve the weather results.
 
 Actual behavior: Nothing happens, the input and 'search' button arent properly set up. As it stands currently, you have to change the city in the JS file to get a different city's weather results
+UPDATE: June 17th, 2021 - Got the search feature to work.
+
 
 Here's a screenshot of the reference website:
 ![A screenshot of the referenced website](assets/images/website_screenshot.png)
